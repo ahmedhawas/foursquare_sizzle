@@ -12,7 +12,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/sass-bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/sass-bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
@@ -20,6 +20,14 @@
     <!-- endbuild -->
   </head>
   <body ng-app="sizzleAngularApp">
+      <div class="header">
+          <ul class="nav nav-pills pull-right">
+              <li class="active"><a ng-href="#">Home</a></li>
+              <li><a ng-href="#">Log In</a></li>
+              <li><a ng-href="#">Sign Up</a></li>
+          </ul>
+          <h3 class="text-muted">Sizzle</h3>
+      </div>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -58,6 +66,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/map.js"></script>
         <!-- endbuild -->
 </body>
 </html>
