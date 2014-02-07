@@ -4,7 +4,8 @@ angular.module('sizzleAngularApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'AngularGM'
 ])
   .config(function ($routeProvider) {
     $routeProvider
