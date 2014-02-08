@@ -5,7 +5,7 @@ angular.module('sizzleAngularApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'AngularGM'
+  'google-maps'
 ])
   .config(function ($routeProvider) {
     $routeProvider
