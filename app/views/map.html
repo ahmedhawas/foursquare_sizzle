@@ -2,3 +2,11 @@
             zoom='map.zoom'
             draggable="true">
 </google-map>
+
+<div ng-controller="UpdateCtrl">
+    <div>
+        <div ng-repeat="update in updates"><em>{{update.from}}</em>: {{update.body}}</div>
+    </div>
+    <input type="text" ng-model="name" placeholder="Name">
+    <input type="text" ng-model="update" ng-keydown="addMessage($event)" placeholder="Update...">
+</div>
