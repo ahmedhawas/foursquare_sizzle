@@ -18,6 +18,10 @@ angular.module('sizzleAngularApp', [
         templateUrl: 'views/map.html',
         controller: 'MapCtrl'
       })
+      .when('/signup', {
+        templateUrl: 'views/signup.html',
+        controller: 'SignupCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
