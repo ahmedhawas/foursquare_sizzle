@@ -6,7 +6,8 @@ angular.module('sizzleAngularApp', [
   'ngSanitize',
   'ngRoute',
   'google-maps',
-  'firebase'
+  'firebase',
+  'ui.bootstrap'
 ])
   .config(function ($routeProvider) {
     $routeProvider

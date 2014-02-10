@@ -1,14 +1,27 @@
-<google-map center='map.center'
-            zoom='map.zoom'
-            draggable="true">
-</google-map>
-
 <div ng-controller="UpdateCtrl">
-    <div>
-        <div ng-repeat="update in updates"><em>{{update.from}}</em>: {{update.body}}</div>
+    <div ng-controller="MapCtrl">
+        <google-map center='map.center'
+                    zoom='map.zoom'
+                    draggable="true">
+        </google-map>
+        <div ng-repeat="update in updates" ng-click="addMarker(update)">
+            <accordion close-others="oneAtATime">
+                <accordion-group>
+                    <accordion-heading>
+                        {{update.body.update}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+                    </accordion-heading>
+                    Shared by {{update.from}} at {{update.body.date}}
+                    position: {{update.body.lat}},{{update.body.long}}
+                </accordion-group>
+            </accordion>
+        </div>
     </div>
-    <input type="text" ng-model="name" placeholder="Name">
-    <input type="text" ng-model="update" ng-keydown="addMessage($event)" placeholder="Update...">
-    <input type="text" ng-model="lat" placeholder="Lat">
-    <input type="text" ng-model="long" placeholder="Long">
+    <div>
+        <input type="text" ng-model="name" placeholder="Name">
+        <input type="text" ng-model="update" placeholder="Update...">
+        <input type="text" ng-model="lat" placeholder="Lat">
+        <input type="text" ng-model="long" placeholder="Long">
+        <!--make a checkbox to choose category??-->
+        <button ng-click="addMessage()">Add Update</button>
+    </div>
 </div>

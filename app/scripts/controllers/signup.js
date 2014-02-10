@@ -10,13 +10,13 @@ angular.module('sizzleAngularApp')
             }
             $scope.users.$add(
                 {from: $scope.email,
-                    body: [ //make sure array here is fine
-                        $scope.username,
-                        $scope.password,
-                        $scope.lat,
-                        $scope.long
+                    body: {
+                        username: $scope.username,
+                        password: $scope.password,
+                        lat: $scope.lat,
+                        long: $scope.long
 
-            ]});
+        }});
 //            find a way to get user location and add it.
 //            $scope.update = '';
         };
