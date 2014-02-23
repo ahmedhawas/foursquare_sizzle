@@ -1,4 +1,5 @@
 <div ng-controller="UpdateCtrl">
+    Your location is {{user_coords}}
     <div ng-controller="MapCtrl">
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-8">
@@ -23,15 +24,13 @@
                         </accordion-group>
                     </accordion>
                 </div>
-                <div>
-                    <input type="text" ng-model="name" placeholder="Name">
-                    <input type="text" ng-model="update" placeholder="Update...">
-                    <input type="text" ng-model="lat" placeholder="Lat">
-                    <input type="text" ng-model="long" placeholder="Long">
-                    <!--make a checkbox to choose category??-->
-                    <button ng-click="addMessage()">Add Update</button>
-                </div>
             </div>
         </div>
+    </div>
+    <div>
+        <input type="text" ng-model="name" placeholder="Name">
+        <input type="text" ng-model="update" placeholder="Update...">
+        <!--make a checkbox to choose category??-->
+        <button ng-click="addMessage()">Add Update</button>
     </div>
 </div>

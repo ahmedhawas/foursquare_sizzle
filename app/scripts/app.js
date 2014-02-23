@@ -7,7 +7,8 @@ angular.module('sizzleAngularApp', [
   'ngRoute',
   'google-maps',
   'firebase',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'geolocation'
 ])
   .config(function ($routeProvider) {
     $routeProvider

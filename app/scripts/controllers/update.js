@@ -1,8 +1,11 @@
 'use strict';
 
 angular.module('sizzleAngularApp')
-    .controller('UpdateCtrl', function ($scope, $firebase) {
+    .controller('UpdateCtrl', function ($scope, $firebase, geolocation) {
         var UpdateRef = new Firebase('https://sizzleapp.firebaseio.com/updates');
+        geolocation.getLocation().then(function(data){
+            $scope.user_coords = {lat:data.coords.latitude, long:data.coords.longitude};
+        });
         $scope.updates = $firebase(UpdateRef);
         $scope.date = new Date(); // unify timezone accross the system to be able to compare time
         $scope.addMessage = function() {
@@ -10,8 +13,8 @@ angular.module('sizzleAngularApp')
                 body: {
                     update: $scope.update,
                     category: $scope.category, // category?
-                    lat: $scope.lat,
-                    long: $scope.long,
+                    lat: $scope.user_coords.lat,
+                    long: $scope.user_coords.long,
                     date: $scope.date
             }});
             $scope.update = '';
