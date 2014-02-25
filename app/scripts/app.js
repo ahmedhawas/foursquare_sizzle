@@ -8,7 +8,8 @@ angular.module('sizzleAngularApp', [
   'google-maps',
   'firebase',
   'ui.bootstrap',
-  'geolocation'
+  'geolocation',
+  'facebook'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -24,6 +25,10 @@ angular.module('sizzleAngularApp', [
         templateUrl: 'views/signup.html',
         controller: 'SignupCtrl'
       })
+      .when('/signin', {
+        templateUrl: 'views/signin.html',
+        controller: 'SigninCtrl'
+    })
       .otherwise({
         redirectTo: '/'
       });

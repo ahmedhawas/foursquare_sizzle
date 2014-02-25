@@ -2,7 +2,7 @@
     Your location is {{user_coords}}
     <div ng-controller="MapCtrl">
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-8">
+            <div class="col-md-9 col-md-push-3">
                 <div class="google-map"
                      center='map.center'
                      zoom='map.zoom'
@@ -11,7 +11,7 @@
                     </markers>
                 </div>
             </div>
-            <div class="col-xs-6 col-md-4">
+            <div class="col-md-3 col-md-pull-9">
                 <div ng-repeat="update in updates">
                     <accordion close-others="oneAtATime">
                         <accordion-group>
